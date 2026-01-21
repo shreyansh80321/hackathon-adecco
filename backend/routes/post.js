@@ -1,6 +1,5 @@
-import express from express
 import { Router } from "express"
-import Post from '../models/Post.js';
+import {Post} from '../models/Post.js';
 
 const router=Router();
 router.post('/',async (req,res)=>{
@@ -52,4 +51,4 @@ router.put('/:id',async (req,res)=>{
         res.status(500).json({message:"Server Error"});
     }
 });
-export default router;
+export const postRoutes=router;
